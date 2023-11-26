@@ -79,14 +79,29 @@ You can run TESA with another option using sequencing coverage according to the 
 1. Make sure both ```BEDTools``` and ```BigWigMerge``` are ready. 
    
    `BEDTools`: https://BEDTools.readthedocs.io/en/latest
-   
    `BigWigMerge`: https://anaconda.org/bioconda/ucsc-bigwigmerge
+   
+   Following script can be used to install `BEDTools` 2.29.1 and `BigWigMerge` through conda:
+   
+```console
+BEDTools 2.29.1:
 
-2. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `reference.fa` and `reference.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
+$ wget https://github.com/arq5x/bedtools2/releases/download/v2.29.1/bedtools-2.29.1.tar.gz
+$ tar -zxvf bedtools-2.29.1.tar.gz
+$ cd bedtools2
+$ make
+
+BigWigMerge:
+
+$ conda install -c bioconda ucsc-bigwigmerge
+$ conda install -c "bioconda/label/cf201901" ucsc-bigwigmerge
+```
+
+3. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `reference.fa` and `reference.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
 
    `SAMTools`: https://github.com/samtools/samtools
 
-3. Run preprocessing script and generate output file `*.tesa`.
+4. Run preprocessing script and generate output file `*.tesa`.
 
 ```console
 $ chmod +x preprocess.sh
