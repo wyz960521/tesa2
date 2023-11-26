@@ -41,6 +41,12 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 
 Enter the folder `tesa` and type `make` then the compiled codes are within the same directory as the source.
 
+```console
+$ git clone https://github.com/OSU-BMBL/tesa.git
+$ cd tesa
+$ make clean && make
+```
+
 ## Inputs and outputs
 
 The major program in the provided package is `tesa`. It is capable of parsing standard `FASTA` format files, allowing sequences with different lengths. Example files are provided for reference.
@@ -76,7 +82,7 @@ You can run TESA with another option using sequencing coverage according to the 
    
    `BigWigMerge`: https://anaconda.org/bioconda/ucsc-bigwigmerge
 
-2. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `sequence.fa` and `sequence.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
+2. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `reference.fa` and `reference.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
 
    `SAMTools`: https://github.com/samtools/samtools
 
@@ -88,7 +94,7 @@ $ ./preprocess.sh [PEAK_PREFIX] [REFERENCE_FILE] [REFERENCE_INDEX_FILE] [OUTPUT_
 ```
 For instance:
 ```console
-$ ./preprocess.sh TEST sequence.fa sequence.fa.fai TEST_out
+$ ./preprocess.sh TEST reference.fa reference.fa.fai TEST_out
 ```   
 4. Run TESA beyond new input with sequencing coverage.
 ```console
