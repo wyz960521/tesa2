@@ -96,6 +96,7 @@ $ make
 BigWigMerge:
 
 $ conda install -c bioconda ucsc-bigwigmerge
+or
 $ conda install -c "bioconda/label/cf201901" ucsc-bigwigmerge
 ```
 
