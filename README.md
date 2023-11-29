@@ -96,8 +96,6 @@ $ make
 BigWigMerge:
 
 $ conda install -c bioconda ucsc-bigwigmerge
-or
-$ conda install -c "bioconda/label/cf201901" ucsc-bigwigmerge
 ```
 
 3. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `reference.fa` and `reference.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
