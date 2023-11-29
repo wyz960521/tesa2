@@ -109,13 +109,15 @@ $ conda install -c "bioconda/label/cf201901" ucsc-bigwigmerge
 $ chmod +x preprocess.sh
 $ ./preprocess.sh [PEAK_PREFIX] [REFERENCE_FILE] [REFERENCE_INDEX_FILE] [OUTPUT_PREFIX]
 ```
+5. Run TESA beyond new input with sequencing coverage.
+```console
+$ ./tesa [OUTPUT_PREFIX].tesa
+```
 For instance:
 ```console
-$ ./preprocess.sh ../example/TEST reference.fa reference.fa.fai TEST_out
-```   
-4. Run TESA beyond new input with sequencing coverage.
-```console
-$ ./tesa ../example/[OUTPUT_PREFIX].tesa
+$ cd tesa/example
+$ ../script/preprocess.sh test reference.fa reference.fa.fai test_out
+$ ../src tesa test_out.tesa
 ```
 ## Parameters
 
