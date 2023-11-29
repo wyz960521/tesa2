@@ -39,6 +39,8 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 
 ## Installation
 
+`GCC` version 9.4.0 or above is required.
+
 Enter the folder `tesa` and type `make` then the compiled codes are within the same directory as the source.
 
 ```console
