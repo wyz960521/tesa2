@@ -43,7 +43,7 @@ Enter the folder `tesa` and type `make` then the compiled codes are within the s
 
 ```console
 $ git clone https://github.com/OSU-BMBL/tesa.git
-$ cd tesa
+$ cd tesa/src
 $ make clean && make
 ```
 
@@ -109,11 +109,11 @@ $ ./preprocess.sh [PEAK_PREFIX] [REFERENCE_FILE] [REFERENCE_INDEX_FILE] [OUTPUT_
 ```
 For instance:
 ```console
-$ ./preprocess.sh TEST reference.fa reference.fa.fai TEST_out
+$ ./preprocess.sh ../example/TEST reference.fa reference.fa.fai TEST_out
 ```   
 4. Run TESA beyond new input with sequencing coverage.
 ```console
-$ ./tesa [OUTPUT_PREFIX].tesa
+$ ./tesa ../example/[OUTPUT_PREFIX].tesa
 ```
 ## Parameters
 
