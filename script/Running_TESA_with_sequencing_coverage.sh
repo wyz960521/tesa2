@@ -1,8 +1,8 @@
 #/bin/bash
 
-# Ensure that the current directory is the tesa root directory
+# Ensure that the current directory is the TESA root directory
 
-# Tesa file compilation
+# TESA file compilation
 cd src
 make clean && make
 cd ..
