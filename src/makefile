@@ -3,7 +3,7 @@ DIST=tesa$(VER)
 PROGS=tesa
 SRCS=struct.c compare_sequence.c make_graph.c get_options.c fib.c write_file.c find_clique.c main.c closure_process.c pvalue.c read_file.c matrix_process.c 
 OBJS=$(SRCS:.c=.o) 
-CC=gcc -g
+CC=gcc -g -w
 
 
 LDFLAGS= -static  -lm 
