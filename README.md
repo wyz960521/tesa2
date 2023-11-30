@@ -115,7 +115,7 @@ $ ./tesa [OUTPUT_PREFIX].tesa
 For instance:
 ```console
 $ cd tesa/example
-$ ../script/preprocess.sh test reference.fa reference.fa.fai test_out
+$ ../preprocess.sh test reference.fa reference.fa.fai test_out
 $ ../src tesa test_out.tesa
 ```
 ## Parameters
