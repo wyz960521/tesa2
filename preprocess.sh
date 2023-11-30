@@ -1,16 +1,4 @@
 #/bin/bash
-# Example usage:
-# cd /fs/scratch/PAS1475/wtsa/ecoli/GSE54901/mace_out
-# preprocess.sh fur_fe_mace /fs/scratch/PAS1475/wtsa/ecoli/genome/GCF_000005845.2_ASM584v2_genomic.fna /fs/scratch/PAS1475/wtsa/ecoli/genome/GCF_000005845.2_ASM584v2_genomic.fna.fai fur_fe
-
-
-# Example parameter:
-# MACE_PREFIX=fur_fe_mace
-# REFERENCE_FILE=/fs/scratch/PAS1475/wtsa/ecoli/genome/GCF_000005845.2_ASM584v2_genomic.fna
-# REFERENCE_INDEX=/fs/scratch/PAS1475/wtsa/ecoli/genome/GCF_000005845.2_ASM584v2_genomic.fna.fai
-# ./preprocess.sh yiaj_glc_mace /fs/scratch/PAS1475/wtsa/ecoli/genome/GCF_000005845.2_ASM584v2_genomic.fna /fs/scratch/PAS1475/wtsa/ecoli/genome/GCF_000005845.2_ASM584v2_genomic.fna.fai yiaj_glc
-
-
 
 MACE_PREFIX=$1
 REFERENCE_FILE=$2
