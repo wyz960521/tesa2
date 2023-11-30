@@ -81,6 +81,7 @@ You can run TESA with another option using sequencing coverage according to the 
 1. Make sure both ```BEDTools``` and ```BigWigMerge``` are ready. 
    
    `BEDTools`: https://BEDTools.readthedocs.io/en/latest
+   
    `BigWigMerge`: https://anaconda.org/bioconda/ucsc-bigwigmerge
    
    Following script can be used to install `BEDTools` 2.29.1 and `BigWigMerge` through conda:
