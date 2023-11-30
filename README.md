@@ -59,20 +59,20 @@ To access help and view all available options.
 $ ./tesa -h (./tesa)
 ```
 
-Take a look at `example` (`FASTA` file) first. Then, you can run `tesa` with a specific length parameter `l`, where the program will handle segments of that length or greater during the two-stage alignment process to identify potential motifs. For example, you can run the following command to specify segments with length exactly 14.
+Take a look at an instance file in `FASTA` format, `test.fasta`, in the example folder. Then, you can run `tesa` with a specific length parameter `l`, where the program will handle segments of that length or greater during the two-stage alignment process to identify potential motifs. For example, you can run the following command to specify segments with length exactly 14.
 
 ```console
-$ ./tesa -i example -l 14
+$ ./tesa -i ../test.fasta -l 14
 ```
 For each input file with a specific length parameter `l`, the program will generate an output file, namely, `'.closures'` file. This file contains all the closures, which represent the instances of identified motifs.
 
 Additionally, you can run `tesa` recognizing the correct length in the scope `[L,U]` by our program automatically.
 
 ```console
-$ ./tesa -i example -L 14 -U 16
+$ ./tesa -i ../test.fasta -L 14 -U 16
 ```
 
-`L` and `U` are lower and upper length of segments during two-stage alignment separately. This is useful when the accurate length is not known in advance. We sort the top `n` closures under each specific length in the increasing order of their *P*-values and save the top `o` closures in the `'.closures'` file. Especially, when the input value of `L` equals to `U`, it is equivalent to finding motifs in a specific length. For example, `'./tesa -i example -L 14 -U 14'` is equivalent to `'./tesa -i example -l 14'`.
+`L` and `U` are lower and upper length of segments during two-stage alignment separately. This is useful when the accurate length is not known in advance. We sort the top `n` closures under each specific length in the increasing order of their *P*-values and save the top `o` closures in the `'.closures'` file. Especially, when the input value of `L` equals to `U`, it is equivalent to finding motifs in a specific length. For example, `'./tesa -i ../test.fasta -L 14 -U 14'` is equivalent to `'./tesa -i ../test.fasta -l 14'`.
 
 ## Running TESA using an input file with sequencing coverage
 
