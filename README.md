@@ -39,7 +39,7 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 
 ## Installation
 
-`GCC` version 9.4.0 or above and `glibc-static` is required. If you are using a newer version of Linux, such as Red Hat Enterprise Linux 7 or 8 or above, `glibc-static` may not be installed by default. Then you can directly install `GCC` and `glibc-static` with root privileges using the following code:
+`GCC` version 9.4.0 or above and `glibc-static` is required. If you are using a newer version of `Linux`, such as `Red Hat Enterprise Linux` 7 or 8 or above, `glibc-static` may not be installed by default. Then you can directly install `GCC` and `glibc-static` with root privileges using the following code:
 
 ```console
 yum -y install gcc
@@ -51,7 +51,7 @@ Alternatively you can meet all requirements by installing the developer toolset 
 sudo apt install build-essential
 ```
 
-Tip: If you don't have root privileges, `conda` can be used to build a virtual environment and perform the above operations in the virtual environment.
+Tip: If you don't have root privileges, `conda` can be used to build a virtual environment and perform the above operations in the `conda` virtual environment.
 
 Enter the folder `tesa` and type `make`, then the compiled codes are within the same directory as the source.
 
