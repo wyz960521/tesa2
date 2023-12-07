@@ -44,9 +44,9 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 Enter the folder `tesa` and type `make` then the compiled codes are within the same directory as the source.
 
 ```console
-$ git clone https://github.com/OSU-BMBL/tesa.git
-$ cd tesa/src
-$ make clean && make
+git clone https://github.com/OSU-BMBL/tesa.git
+cd tesa/src
+make clean && make
 ```
 
 ## Inputs and outputs
@@ -56,20 +56,20 @@ The major program in the provided package is `tesa`. It is capable of parsing st
 To access help and view all available options.
 
 ```console
-$ ./tesa -h (./tesa)
+./tesa -h (./tesa)
 ```
 
 Take a look at an instance file in `FASTA` format, `test.fasta`, in the example folder. Then, you can run `tesa` with a specific length parameter `l`, where the program will handle segments of that length or greater during the two-stage alignment process to identify potential motifs. For example, you can run the following command to specify segments with length exactly 14.
 
 ```console
-$ ./tesa -i ../test.fasta -l 14
+./tesa -i ../test.fasta -l 14
 ```
 For each input file with a specific length parameter `l`, the program will generate an output file, namely, `'.closures'` file. This file contains all the closures, which represent the instances of identified motifs.
 
 Additionally, you can run `tesa` recognizing the correct length in the scope `[L,U]` by our program automatically.
 
 ```console
-$ ./tesa -i ../test.fasta -L 14 -U 16
+./tesa -i ../test.fasta -L 14 -U 16
 ```
 
 `L` and `U` are lower and upper length of segments during two-stage alignment separately. This is useful when the accurate length is not known in advance. We sort the top `n` closures under each specific length in the increasing order of their *P*-values and save the top `o` closures in the `'.closures'` file. Especially, when the input value of `L` equals to `U`, it is equivalent to finding motifs in a specific length. For example, `'./tesa -i ../test.fasta -L 14 -U 14'` is equivalent to `'./tesa -i ../test.fasta -l 14'`.
@@ -85,18 +85,20 @@ You can run TESA with another option using sequencing coverage according to the 
    `BigWigMerge`: https://anaconda.org/bioconda/ucsc-bigwigmerge
    
    Following script can be used to install `BEDTools` 2.29.1 and `BigWigMerge` through conda:
-   
-```console
+
 BEDTools 2.29.1:
 
-$ wget https://github.com/arq5x/bedtools2/releases/download/v2.29.1/bedtools-2.29.1.tar.gz
-$ tar -zxvf bedtools-2.29.1.tar.gz
-$ cd bedtools2
-$ make
+```console
+wget https://github.com/arq5x/bedtools2/releases/download/v2.29.1/bedtools-2.29.1.tar.gz
+tar -zxvf bedtools-2.29.1.tar.gz
+cd bedtools2
+make
+```
 
 BigWigMerge:
 
-$ conda install -c bioconda ucsc-bigwigmerge
+```console
+conda install -c bioconda ucsc-bigwigmerge
 ```
 
 3. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `reference.fa` and `reference.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
@@ -106,18 +108,18 @@ $ conda install -c bioconda ucsc-bigwigmerge
 4. Run preprocessing script and generate output file `*.tesa`.
 
 ```console
-$ chmod +x preprocess.sh
-$ ./preprocess.sh [PEAK_PREFIX] [REFERENCE_FILE] [REFERENCE_INDEX_FILE] [OUTPUT_PREFIX]
+chmod +x preprocess.sh
+./preprocess.sh [PEAK_PREFIX] [REFERENCE_FILE] [REFERENCE_INDEX_FILE] [OUTPUT_PREFIX]
 ```
 5. Run TESA beyond new input with sequencing coverage.
 ```console
-$ ./tesa [OUTPUT_PREFIX].tesa
+./tesa [OUTPUT_PREFIX].tesa
 ```
 For instance:
 ```console
-$ cd example
-$ ../preprocess.sh test reference.fa reference.fa.fai test_out
-$ ../src/tesa test_out.tesa
+cd example
+../preprocess.sh test reference.fa reference.fa.fai test_out
+../src/tesa test_out.tesa
 ```
 ## Parameters
 
