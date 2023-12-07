@@ -45,7 +45,7 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 yum -y install gcc
 yum install glibc-static
 ```
-Alternatively you can meet all requirements by installing the developer toolset `build-essential`：
+Alternatively you can meet all requirements by installing the developer toolset `build-essential`:
 ```console
 sudo apt install build-essential
 ```
