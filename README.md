@@ -39,18 +39,21 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 
 ## Installation
 
-`GCC` version 9.4.0 or above and `glibc-static` is required. Following script can be used:
+`GCC` version 9.4.0 or above and `glibc-static` is required. If you are using a newer version of Linux, such as Red Hat Enterprise Linux 7 or 8 or above, `glibc-static` may not be installed by default. Then you can directly install `GCC` and `glibc-static` with root privileges using the following code:
 
 ```console
 yum -y install gcc
 yum install glibc-static
 ```
+
 Alternatively you can meet all requirements by installing the developer toolset `build-essential`:
 ```console
 sudo apt install build-essential
 ```
 
-Enter the folder `tesa` and type `make` then the compiled codes are within the same directory as the source.
+Tip: If you don't have root privileges, `conda` can be used to build a virtual environment and perform the above operations in the virtual environment.
+
+Enter the folder `tesa` and type `make`, then the compiled codes are within the same directory as the source.
 
 ```console
 git clone https://github.com/OSU-BMBL/tesa.git
@@ -75,13 +78,13 @@ Take a look at an instance file in `FASTA` format, `test.fasta`, in the example 
 ```
 For each input file with a specific length parameter `l`, the program will generate an output file, namely, `'.closures'` file. This file contains all the closures, which represent the instances of identified motifs.
 
-Additionally, you can run `tesa` recognizing the correct length in the scope `[L,U]` by our program automatically.
+Additionally, you can run `tesa` recognizing the correct segment length in the scope `[L,U]` by our program automatically.
 
 ```console
 ./tesa -i ../test.fasta -L 14 -U 16
 ```
 
-`L` and `U` are lower and upper length of segments during two-stage alignment separately. This is useful when the accurate length is not known in advance. We sort the top `n` closures under each specific length in the increasing order of their *P*-values and save the top `o` closures in the `'.closures'` file. Especially, when the input value of `L` equals to `U`, it is equivalent to finding motifs in a specific length. For example, `'./tesa -i ../test.fasta -L 14 -U 14'` is equivalent to `'./tesa -i ../test.fasta -l 14'`.
+`L` and `U` are lower and upper length of segments during two-stage alignment separately. This is useful when the accurate length is not known in advance. We sort the top `n` closures under each specific length in the increasing order of their *P*-values and save the top `o` closures in the `'.closures'` file. Especially, when the input value of `L` equals to `U`, it is equivalent to finding motifs based on segments of a specific length. For example, `'./tesa -i ../test.fasta -L 14 -U 14'` is equivalent to `'./tesa -i ../test.fasta -l 14'`.
 
 ## Running TESA using an input file with sequencing coverage
 
