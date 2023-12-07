@@ -39,7 +39,16 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 
 ## Installation
 
-`GCC` version 9.4.0 or above is required.
+`GCC` version 9.4.0 or above and `glibc-static` is required. Following script can be used:
+
+```console
+yum -y install gcc
+yum install glibc-static
+```
+Alternatively you can meet all requirements by installing the developer toolset `build-essential`：
+```console
+sudo apt install build-essential
+```
 
 Enter the folder `tesa` and type `make` then the compiled codes are within the same directory as the source.
 
