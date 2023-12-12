@@ -7,7 +7,7 @@ OUTPUT_NAME=$4
 
 
 
-sort -k5 ${MACE_PREFIX}_out.border_pair.bed | awk -vF=100 'BEGIN{ OFS="\t"; }{ len=$3-$2; diff=F-len; flank=int(diff/2); upflank=downflank=flank; if (diff%2==1) { downflank++; }; print $1, $2-upflank, $3+downflank; }' -  | awk '{print $0 "\t" $1":"$2"-"$3}'> ${MACE_PREFIX}_out.tmp.bed
+sort -k5 ${MACE_PREFIX}.bed | awk -vF=100 'BEGIN{ OFS="\t"; }{ len=$3-$2; diff=F-len; flank=int(diff/2); upflank=downflank=flank; if (diff%2==1) { downflank++; }; print $1, $2-upflank, $3+downflank; }' -  | awk '{print $0 "\t" $1":"$2"-"$3}'> ${MACE_PREFIX}_out.tmp.bed
 
 bigWigMerge ${MACE_PREFIX}_Forward.bw ${MACE_PREFIX}_Reverse.bw ${MACE_PREFIX}_out.tmp.bg
 
