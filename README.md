@@ -39,11 +39,10 @@ The sequence set refers to the collection of DNA sequences that are used as inpu
 
 ## Installation
 
-`GCC` version 9.4.0 or above and `glibc-static` is required. If you are using a newer version of `Linux`, such as `Red Hat Enterprise Linux` 7 or 8 or above, `glibc-static` may not be installed by default. Then you can directly install `GCC` and `glibc-static` with root privileges using the following code:
+`GCC` version 9.4.0 or above is required. You can directly install `GCC` with root privileges using the following code:
 
 ```console
 yum -y install gcc
-yum install glibc-static
 ```
 
 Alternatively you can meet all requirements by installing the developer toolset `build-essential`:
