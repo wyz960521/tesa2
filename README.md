@@ -77,7 +77,7 @@ conda install -c bioconda ucsc-bigwigmerge
 
 Tip: If you don't have root privileges, `conda` can be used to build a virtual environment and perform the above operations in the `conda` virtual environment.
 
-It is strongly recommended that add the above software to the environment `PATH` after installation. For example, one way, add `export PATH=$PATH:<path_of_BEDTools_bin_path>` to `~/.bash_profile`, where `<path_of_BEDTools_bin_path>` is your `bedtools` binary files location.
+It is strongly recommended to add the above software to the environment `PATH` after installation. For example, one way, add `export PATH=$PATH:<path_of_BEDTools_bin_path>` to `~/.bash_profile`, where `<path_of_BEDTools_bin_path>` is your `bedtools` binary files location.
 
 
 
