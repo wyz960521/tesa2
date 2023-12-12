@@ -87,7 +87,7 @@ cd tesa/src
 make clean && make
 ```
 
-## Inputs and outputs
+## Running TESA using an input file without sequencing coverage
 
 The major program in the provided package is `tesa`. It is capable of parsing standard `FASTA` format files, allowing sequences with different lengths. Example files are provided for reference.
 
