@@ -116,7 +116,7 @@ Additionally, you can run `tesa` recognizing the correct segment length in the s
 
 You can run TESA with another option using sequencing coverage according to the following instructions:
  
-1. Make sure both ```BEDTools``` and ```BigWigMerge``` are ready and can be added to your environment `PATH`.
+1. Make sure both ```BEDTools``` and ```BigWigMerge``` are ready and added to your environment `PATH` so that they can be directly called.
 
 2. A peak file with `BED` format (for instance, `[PREFIX].bed`), several `bigWig` files for example named `[PREFIX]_Forward.bw` and `[PREFIX]_Reverse.bw` respectively and a reference file with `FASTA` format with its index file of `FASTA.FAI` format are required. For instance, there is a toy run with `test.bed`, `test_Forward.bw`, `test_Reverse.bw`, `reference.fa` and `reference.fa.fai` as input. Additionally, you can generate reference using `SAMTools`. 
 
