@@ -6,7 +6,7 @@ OBJS=$(SRCS:.c=.o)
 CC=gcc -g -w
 
 
-LDFLAGS= -static  -lm 
+LDFLAGS= -lm 
 CFLAGS=-g -O3 -Wall -ansi -I.  -D VER=$(VER) 
 
 
