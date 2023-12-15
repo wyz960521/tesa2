@@ -138,6 +138,7 @@ You can run TESA with another option using sequencing coverage according to the 
 For instance:
 ```console
 cd example
+chmod 777 ../script/preprocess.sh
 ../script/preprocess.sh test reference.fa reference.fa.fai test_out
 ../src/tesa -i test_out.tesa
 ```
