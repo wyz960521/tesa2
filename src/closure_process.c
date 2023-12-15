@@ -82,7 +82,7 @@ continuous get_similarity_between_two_patterns(int seq1, int seq2, int pos1, int
 ,10.8};*/
 
 	continuous binomial14[] = {
-			0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.7, 3.5, 4.4, 5.5, 6.8, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4, 8.4};
+			0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.7, 3.5, 4.4, 5.5, 6.8, 8.4};
 	
  	for(i=0;i<motif_length;++i)
   	{
@@ -100,7 +100,7 @@ continuous get_similarity_between_two_patterns(int seq1, int seq2, int pos1, int
 	}
 	else
 	{
-		return (binomial14[(int)num]);
+		return (min(binomial14[(int)num], 13));
 	}
 }
 
@@ -172,7 +172,7 @@ continuous improve_similarity_between_two_patterns(int seq1, int seq2, int pos1,
 	}
 	else
 	{
-		return (binomial14[(int)num]);
+		return (min(binomial14[(int)num], 13));
 	}
 }
 
