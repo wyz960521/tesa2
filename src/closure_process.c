@@ -6,6 +6,13 @@
 #include "closure_process.h"
 static const int HEAP_SIZE = 3000000;
 /************************************************************************/
+int min(int a, int b)
+{
+	if (a < b)
+		return a;
+	else
+		return b;
+}
 discrete **frequency_matrix(char **sequence_temp, int a, int b, int motif_number)
 /*get the frequency matrix used in caculating profile matrix*/
 {
