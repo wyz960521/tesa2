@@ -139,7 +139,7 @@ For instance:
 ```console
 cd example
 ../script/preprocess.sh test reference.fa reference.fa.fai test_out
-../src/tesa test_out.tesa
+../src/tesa -i test_out.tesa
 ```
 ## Parameters
 
