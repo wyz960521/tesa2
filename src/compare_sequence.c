@@ -1155,16 +1155,6 @@ void compare_sequences(char **sequences)
 		free(matrix1);
 		free(matrix2);
 	}
-	else
-	{
-		free(marray); free(marray1); free(match);free(match1);
-		free(s_col);
-		for(i=0;i<s_rows;i++)
-		{
-			free(matrix[i]); free(matrix1[i]); free(matrix2[i]);
-		}
-		free(matrix); free(matrix1); free(matrix2);
-	}
 	if (po->middle_enhance)
 		uglyTime("Signal of middle part strengthening in %d sequences complete ", s_rows);
 	else if (po->no_enhance)
