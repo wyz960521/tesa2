@@ -7,8 +7,7 @@ cd src
 make clean && make
 cd ..
 
-# Running TESA using an input file with sequencing coverage
-cd example
-chmod +x ../script/preprocess.sh
-../preprocess.sh test reference.fa reference.fa.fai test_out
-../src/tesa -i test_out.tesa
+# Running TESA using an input file without sequencing coverage
+cd src
+./tesa -i ../example/test.fasta -l 14
+./tesa -i ../example/test.fasta -L 14 -U 16
